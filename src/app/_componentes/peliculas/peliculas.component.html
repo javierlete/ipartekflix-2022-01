@@ -6,6 +6,7 @@
       <th>Descripción</th>
       <th>Estreno</th>
       <th>Valoración</th>
+      <th>Opciones</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,22 @@
       <td>{{p.descripcion}}</td>
       <td>{{p.estreno}}</td>
       <td>{{p.valoracion}}</td>
+      <td>
+        <a class="btn btn-primary" routerLink="/pelicula/{{p.id}}">Editar</a>
+        <a class="btn btn-danger" (click)="borrar(p.id)">Borrar</a>
+      </td>
     </tr>
   </tbody>
+  <tfoot class="table-dark">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <a class="btn btn-primary" routerLink="/pelicula/">Añadir</a>
+      </td>
+    </tr>
+  </tfoot>
 </table>

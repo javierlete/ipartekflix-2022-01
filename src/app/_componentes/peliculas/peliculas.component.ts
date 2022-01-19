@@ -17,4 +17,7 @@ export class PeliculasComponent implements OnInit {
     this.peliculaService.obtenerPeliculas().subscribe(pelis => this.peliculas = pelis);
   }
 
+  borrar(id: number) {
+    console.log(id);
+  }
 }
