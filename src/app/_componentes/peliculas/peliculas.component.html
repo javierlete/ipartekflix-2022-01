@@ -1,5 +1,20 @@
-<ul>
-  <li *ngFor="let peli of peliculas">
-    {{peli.titulo}}
-  </li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Estreno</th>
+      <th>Valoración</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of peliculas">
+      <td>{{p.id}}</td>
+      <td>{{p.titulo}}</td>
+      <td>{{p.descripcion}}</td>
+      <td>{{p.estreno}}</td>
+      <td>{{p.valoracion}}</td>
+    </tr>
+  </tbody>
+</table>
