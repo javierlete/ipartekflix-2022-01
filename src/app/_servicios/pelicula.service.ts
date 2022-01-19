@@ -18,4 +18,8 @@ export class PeliculaService {
   obtenerPeliculaPorId(id: number): Observable<Pelicula> {
     return this.http.get<Pelicula>(this.URL + id);
   }
+
+  borrarPelicula(id: number): Observable<any> {
+    return this.http.delete<any>(this.URL + id);
+  }
 }

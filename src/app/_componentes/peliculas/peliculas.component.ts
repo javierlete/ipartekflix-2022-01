@@ -14,10 +14,16 @@ export class PeliculasComponent implements OnInit {
   constructor(private peliculaService: PeliculaService) { }
 
   ngOnInit(): void {
-    this.peliculaService.obtenerPeliculas().subscribe(pelis => this.peliculas = pelis);
+    this.obtenerPelis();
   }
 
   borrar(id: number) {
     console.log(id);
+
+    this.peliculaService.borrarPelicula(id).subscribe(_ => this.obtenerPelis());
+  }
+
+  private obtenerPelis() {
+    this.peliculaService.obtenerPeliculas().subscribe(pelis => this.peliculas = pelis);
   }
 }
