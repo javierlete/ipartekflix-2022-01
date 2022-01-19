@@ -2,35 +2,35 @@
   <div class="row mb-3">
     <label for="id" class="col-sm-2 col-form-label">Id</label>
     <div class="col-sm-10">
-      <input type="number" readonly class="form-control" id="id">
+      <input type="number" readonly [(ngModel)]="pelicula.id" class="form-control" id="id" name="id">
     </div>
   </div>
 
   <div class="row mb-3">
     <label for="titulo" class="col-sm-2 col-form-label">Título</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="titulo">
+      <input type="text" [(ngModel)]="pelicula.titulo" class="form-control" id="titulo" name="titulo">
     </div>
   </div>
 
   <div class="row mb-3">
     <label for="descripcion" class="col-sm-2 col-form-label">Descripción</label>
     <div class="col-sm-10">
-      <textarea class="form-control" id="descripcion"></textarea>
+      <textarea [(ngModel)]="pelicula.descripcion" class="form-control" id="descripcion" name="descripcion"></textarea>
     </div>
   </div>
 
   <div class="row mb-3">
     <label for="estreno" class="col-sm-2 col-form-label">Estreno</label>
     <div class="col-sm-10">
-      <input type="date" class="form-control" id="estreno">
+      <input type="date" [(ngModel)]="pelicula.estreno" class="form-control" id="estreno" name="estreno">
     </div>
   </div>
 
   <div class="row mb-3">
     <label for="valoracion" class="col-sm-2 col-form-label">Valoración</label>
     <div class="col-sm-10">
-      <input type="number" min="1" max="5" class="form-control" id="valoracion">
+      <input type="number" min="1" max="5" [(ngModel)]="pelicula.valoracion" class="form-control" id="valoracion" name="valoracion">
     </div>
   </div>
 

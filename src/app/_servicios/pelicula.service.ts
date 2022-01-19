@@ -14,4 +14,8 @@ export class PeliculaService {
   obtenerPeliculas(): Observable<Pelicula[]> {
     return this.http.get<Pelicula[]>(this.URL);
   }
+
+  obtenerPeliculaPorId(id: number): Observable<Pelicula> {
+    return this.http.get<Pelicula>(this.URL + id);
+  }
 }

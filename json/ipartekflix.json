@@ -5,14 +5,14 @@
       "titulo": "Matrix",
       "descripcion": "Muchas letras verdes",
       "estreno": "2000-01-01",
-      "valoracion": 8
+      "valoracion": 4
     },
     {
       "id": 2,
       "titulo": "Superman",
       "descripcion": "Tío que vuela",
       "estreno": "1995-01-01",
-      "valoracion": 9
+      "valoracion": 5
     }
   ]
 }
