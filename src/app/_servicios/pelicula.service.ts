@@ -19,6 +19,14 @@ export class PeliculaService {
     return this.http.get<Pelicula>(this.URL + id);
   }
 
+  insertarPelicula(pelicula: Pelicula): Observable<Pelicula> {
+    return this.http.post<Pelicula>(this.URL, pelicula);
+  }
+
+  modificarPelicula(pelicula: Pelicula): Observable<Pelicula> {
+    return this.http.put<Pelicula>(this.URL + pelicula.id, pelicula);
+  }
+
   borrarPelicula(id: number): Observable<any> {
     return this.http.delete<any>(this.URL + id);
   }

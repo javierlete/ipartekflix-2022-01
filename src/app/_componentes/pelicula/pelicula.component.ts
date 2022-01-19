@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Pelicula } from 'src/app/_modelos/pelicula';
@@ -14,7 +15,7 @@ export class PeliculaComponent implements OnInit {
     id: 0, titulo: '', descripcion: '', estreno: new Date(), valoracion: 3
   };
 
-  constructor(private peliculaService: PeliculaService, private route: ActivatedRoute) { }
+  constructor(private peliculaService: PeliculaService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
     const id: number = Number(this.route.snapshot.paramMap.get('id'));
@@ -26,4 +27,15 @@ export class PeliculaComponent implements OnInit {
     }
   }
 
+  guardar() {
+    if(this.pelicula.id) {
+      this.peliculaService.modificarPelicula(this.pelicula).subscribe(
+        _ => this.location.back()
+      )
+    } else {
+      this.peliculaService.insertarPelicula(this.pelicula).subscribe(
+        _ => this.location.back()
+      )
+    }
+  }
 }
