@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Pelicula } from 'src/app/_modelos/pelicula';
 import { PeliculaService } from 'src/app/_servicios/pelicula.service';
+import { decorarSelectorFecha } from 'src/vanillajs-datepicker';
 
 @Component({
   selector: 'app-pelicula',
@@ -25,6 +26,8 @@ export class PeliculaComponent implements OnInit {
     if(id) {
       this.peliculaService.obtenerPeliculaPorId(id).subscribe(peli => this.pelicula = peli);
     }
+
+    decorarSelectorFecha();
   }
 
   guardar() {
