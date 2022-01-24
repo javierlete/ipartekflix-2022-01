@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
 import { decorarSelectorFecha } from 'src/vanillajs-datepicker';
 
 @Component({
@@ -6,7 +6,7 @@ import { decorarSelectorFecha } from 'src/vanillajs-datepicker';
   templateUrl: './label-input.component.html',
   styleUrls: ['./label-input.component.css']
 })
-export class LabelInputComponent implements OnInit {
+export class LabelInputComponent {
   @Input() campo: any;
   @Output() campoChange = new EventEmitter<any>();
 
@@ -15,13 +15,9 @@ export class LabelInputComponent implements OnInit {
   @Input() tipo: string = 'text';
   @Input() soloLectura: boolean = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  ngOnChanges(): void {
+  ngAfterViewInit() {
     if (this.tipo === 'date') {
+      console.log('FECHA');
       decorarSelectorFecha();
     }
   }
