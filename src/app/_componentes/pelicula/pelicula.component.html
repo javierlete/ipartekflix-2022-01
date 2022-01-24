@@ -1,39 +1,9 @@
 <form>
-  <app-label-input id="prueba" etiqueta="Prueba" [(campo)]="pelicula.titulo"></app-label-input>
-  <div class="row mb-3">
-    <label for="id" class="col-sm-2 col-form-label">Id</label>
-    <div class="col-sm-10">
-      <input type="number" readonly [(ngModel)]="pelicula.id" class="form-control" id="id" name="id">
-    </div>
-  </div>
-
-  <div class="row mb-3">
-    <label for="titulo" class="col-sm-2 col-form-label">Título</label>
-    <div class="col-sm-10">
-      <input type="text" [(ngModel)]="pelicula.titulo" class="form-control" id="titulo" name="titulo">
-    </div>
-  </div>
-
-  <div class="row mb-3">
-    <label for="descripcion" class="col-sm-2 col-form-label">Descripción</label>
-    <div class="col-sm-10">
-      <textarea [(ngModel)]="pelicula.descripcion" class="form-control" id="descripcion" name="descripcion"></textarea>
-    </div>
-  </div>
-
-  <div class="row mb-3">
-    <label for="estreno" class="col-sm-2 col-form-label">Estreno</label>
-    <div class="col-sm-10">
-      <input type="date" [(ngModel)]="pelicula.estreno" class="form-control" id="estreno" name="estreno">
-    </div>
-  </div>
-
-  <div class="row mb-3">
-    <label for="valoracion" class="col-sm-2 col-form-label">Valoración</label>
-    <div class="col-sm-10">
-      <input type="number" min="1" max="5" [(ngModel)]="pelicula.valoracion" class="form-control" id="valoracion" name="valoracion">
-    </div>
-  </div>
+  <app-label-input id="id" etiqueta="Id" [(campo)]="pelicula.id" tipo="number" [soloLectura]="true"></app-label-input>
+  <app-label-input id="titulo" etiqueta="Título" [(campo)]="pelicula.titulo"></app-label-input>
+  <app-label-input id="descripcion" etiqueta="Descripción" [(campo)]="pelicula.descripcion"></app-label-input>
+  <app-label-input id="estreno" etiqueta="Estreno" [(campo)]="pelicula.estreno" tipo="date"></app-label-input>
+  <app-label-input id="valoracion" etiqueta="Valoración" [(campo)]="pelicula.valoracion" tipo="number"></app-label-input>
 
   <div class="row mb-3">
     <div class="offset-sm-2 col-sm-10">

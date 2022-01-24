@@ -1,6 +1,7 @@
 <div class="row mb-3">
   <label for="{{id}}" class="col-sm-2 col-form-label">{{etiqueta}}</label>
   <div class="col-sm-10">
-    <input (input)="onChange()" type="{{tipo}}" [attr.readonly]="soloLectura ? '' : undefined" class="form-control" id="{{id}}" name="{{id}}" [(ngModel)]="campo" />
+    <input (input)="onChange()" type="{{tipo}}" [attr.readonly]="soloLectura ? '' : undefined"
+      class="form-control" id="{{id}}" name="{{id}}" [(ngModel)]="campo" />
   </div>
 </div>
