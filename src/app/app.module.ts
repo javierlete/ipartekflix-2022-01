@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PeliculasComponent } from './_componentes/peliculas/peliculas.component';
 import { PeliculaComponent } from './_componentes/pelicula/pelicula.component';
 import { FormsModule } from '@angular/forms';
-import { LabelInputComponent } from './label-input/label-input.component';
+import { LabelInputComponent } from './_componentes/label-input/label-input.component';
 
 @NgModule({
   declarations: [
