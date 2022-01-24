@@ -26,8 +26,6 @@ export class PeliculaComponent implements OnInit {
     if(id) {
       this.peliculaService.obtenerPeliculaPorId(id).subscribe(peli => this.pelicula = peli);
     }
-
-    decorarSelectorFecha();
   }
 
   guardar() {

@@ -11,6 +11,6 @@ export function decorarSelectorFecha() {
     });
     elem.type = 'text';
   } else {
-    console.log('No se ha encontrado ningún input type=date');
+    console.error('No se ha encontrado ningún input type=date');
   }
 };

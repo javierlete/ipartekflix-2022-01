@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { decorarSelectorFecha } from 'src/vanillajs-datepicker';
 
 @Component({
   selector: 'app-label-input',
@@ -19,7 +20,19 @@ export class LabelInputComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onChange() {
+  ngOnChanges(): void {
+    if (this.tipo === 'date') {
+      decorarSelectorFecha();
+    }
+  }
+
+  onChange(dato?: any) {
+    console.log(this.campo, dato);
+
+    if (dato) {
+      this.campo = dato;
+    }
+
     this.campoChange.emit(this.campo);
   }
 
