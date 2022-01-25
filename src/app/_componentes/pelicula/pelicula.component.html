@@ -1,6 +1,8 @@
 <pre>{{ pelicula | json }}</pre>
-<pre *ngFor="let dato of pelicula | keyvalue">
-{{dato.key}} = {{dato.value}}
+<pre>
+  <ng-container *ngFor="let dato of pelicula | keyvalue">
+    {{dato.key}} = {{dato.value}}
+  </ng-container>
 </pre>
 
 <form>
@@ -8,7 +10,8 @@
   <app-label-input id="titulo" etiqueta="Título" [(campo)]="pelicula.titulo"></app-label-input>
   <app-label-input id="descripcion" etiqueta="Descripción" [(campo)]="pelicula.descripcion"></app-label-input>
   <app-label-input id="estreno" etiqueta="Estreno" [(campo)]="pelicula.estreno" tipo="date"></app-label-input>
-  <app-label-input id="valoracion" etiqueta="Valoración" [(campo)]="pelicula.valoracion" tipo="number"></app-label-input>
+  <app-label-input id="valoracion" etiqueta="Valoración" [(campo)]="pelicula.valoracion" tipo="number">
+  </app-label-input>
 
   <div class="row mb-3">
     <div class="offset-sm-2 col-sm-10">
