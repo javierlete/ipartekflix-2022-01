@@ -14,7 +14,7 @@
       <td>{{p.id}}</td>
       <td>{{p.titulo}}</td>
       <td>{{p.descripcion}}</td>
-      <td>{{p.estreno}}</td>
+      <td>{{p.estreno | date:'yyyy-MM-dd'}}</td>
       <td>{{p.valoracion}}</td>
       <td>
         <a class="btn btn-primary" routerLink="/pelicula/{{p.id}}">Editar</a>

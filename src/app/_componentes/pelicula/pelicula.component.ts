@@ -13,7 +13,7 @@ import { decorarSelectorFecha } from 'src/vanillajs-datepicker';
 export class PeliculaComponent implements OnInit {
 
   pelicula: Pelicula = {
-    id: 0, titulo: '', descripcion: '', estreno: new Date(), valoracion: 3
+    id: 0, titulo: '', descripcion: '', estreno: new Date(2000,0,1), valoracion: 3
   };
 
   constructor(private peliculaService: PeliculaService, private route: ActivatedRoute, private location: Location) { }
