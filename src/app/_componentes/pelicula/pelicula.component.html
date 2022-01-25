@@ -1,3 +1,8 @@
+<pre>{{ pelicula | json }}</pre>
+<pre *ngFor="let dato of pelicula | keyvalue">
+{{dato.key}} = {{dato.value}}
+</pre>
+
 <form>
   <app-label-input id="id" etiqueta="Id" [(campo)]="pelicula.id" tipo="number" [soloLectura]="true"></app-label-input>
   <app-label-input id="titulo" etiqueta="Título" [(campo)]="pelicula.titulo"></app-label-input>

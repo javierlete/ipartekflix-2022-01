@@ -8,7 +8,8 @@ import { PeliculaService } from 'src/app/_servicios/pelicula.service';
   styleUrls: ['./peliculas.component.css']
 })
 export class PeliculasComponent implements OnInit {
-
+  mapa:
+  {[k: string]: string} = {'=1': 'Malísima', '=2': 'Mala', '=3': 'Regular', '=4': 'Buena', '=5': 'Buenísima'};
   peliculas: Pelicula[] = [];
 
   constructor(private peliculaService: PeliculaService) { }
