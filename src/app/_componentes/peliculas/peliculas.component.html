@@ -12,7 +12,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let p of peliculas">
-      <td>{{p.id | number:'3.0-0'}} {{p.id | currency:'EUR':'symbol':'1.2-2':'es'}}</td>
+      <td>{{p.id | number:'3.0-0'}} {{p.id | euro:3}} {{p.id | currency:'EUR':'symbol':'1.2-2':'es'}}</td>
       <td>{{p.titulo}}</td>
       <td>{{p.descripcion | slice:0:30}}...</td>
       <td>{{p.estreno | date:'yyyy-MM-dd'}}</td>

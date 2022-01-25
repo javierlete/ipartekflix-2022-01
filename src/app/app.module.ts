@@ -12,6 +12,7 @@ import { LabelInputComponent } from './_componentes/label-input/label-input.comp
 
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import { EuroPipe } from './_pipes/euro.pipe';
 
 registerLocaleData(localeEs);
 @NgModule({
@@ -19,7 +20,8 @@ registerLocaleData(localeEs);
     AppComponent,
     PeliculasComponent,
     PeliculaComponent,
-    LabelInputComponent
+    LabelInputComponent,
+    EuroPipe
   ],
   imports: [
     BrowserModule,
