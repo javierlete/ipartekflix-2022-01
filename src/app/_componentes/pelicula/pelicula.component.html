@@ -7,7 +7,7 @@
 
 <form>
   <app-label-input id="id" etiqueta="Id" [(campo)]="pelicula.id" tipo="number" [soloLectura]="true"></app-label-input>
-  <app-label-input id="titulo" etiqueta="Título" [(campo)]="pelicula.titulo"></app-label-input>
+  <app-label-input appCaja id="titulo" etiqueta="Título" [(campo)]="pelicula.titulo"></app-label-input>
   <app-label-input id="descripcion" etiqueta="Descripción" [(campo)]="pelicula.descripcion"></app-label-input>
   <app-label-input id="estreno" etiqueta="Estreno" [(campo)]="pelicula.estreno" tipo="date"></app-label-input>
   <app-label-input id="valoracion" etiqueta="Valoración" [(campo)]="pelicula.valoracion" tipo="number">
