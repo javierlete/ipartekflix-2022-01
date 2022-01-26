@@ -1,0 +1,3 @@
+<pre appCaja>{{alertaService.alertas | json}}</pre>
+<app-alerta *ngFor="let alerta of alertaService.alertas" [alerta]="alerta" (cierre)="borrar(alerta)"></app-alerta>
+<button *ngIf="alertaService.alertas.length" class="btn btn-secondary" (click)="alertaService.limpiarAlertas()">Limpiar alertas</button>

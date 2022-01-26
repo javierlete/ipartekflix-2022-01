@@ -1,5 +1,8 @@
 <h1>Ipartekflix</h1>
 
-<app-alerta mensaje="Prueba nueva" nivel="warning"></app-alerta>
+<app-alerta *ngIf="mostrarAlerta" mensaje="Bienvenido a esta super aplicación" [nivel]="'info'"
+  (cierre)="mostrarAlerta = false"></app-alerta>
+
+<app-alertas></app-alertas>
 
 <router-outlet></router-outlet>

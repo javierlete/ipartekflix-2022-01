@@ -15,6 +15,7 @@ import localeEs from '@angular/common/locales/es';
 import { EuroPipe } from './_pipes/euro.pipe';
 import { CajaDirective } from './_directivas/caja.directive';
 import { AlertaComponent } from './_componentes/alerta/alerta.component';
+import { AlertasComponent } from './_componentes/alertas/alertas.component';
 
 registerLocaleData(localeEs);
 @NgModule({
@@ -25,7 +26,8 @@ registerLocaleData(localeEs);
     LabelInputComponent,
     EuroPipe,
     CajaDirective,
-    AlertaComponent
+    AlertaComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
